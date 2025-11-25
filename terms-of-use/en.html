@@ -1,0 +1,534 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>End User License Agreement - Ninja Timer Control</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #2c5f8d 0%, #3a7ca5 50%, #5b9bd5 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 1px rgba(70, 130, 180, 0.3);
+        }
+        .lang-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            z-index: 1000;
+            border: 1px solid rgba(70, 130, 180, 0.2);
+        }
+        .lang-selector a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #4682b4;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .lang-selector a:hover {
+            background: #e6f2ff;
+            color: #0078d4;
+        }
+        .lang-selector a.active {
+            background: #4682b4;
+            color: white;
+        }
+        h1 {
+            color: #4682b4;
+            font-size: 2.6em;
+            margin-bottom: 10px;
+            border-bottom: 4px solid #4682b4;
+            padding-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        h2 {
+            color: #5b9bd5;
+            font-size: 1.9em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-left: 5px solid #5b9bd5;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #0078d4;
+            font-size: 1.35em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        p, li {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+        ul, ol {
+            margin-left: 35px;
+            margin-bottom: 20px;
+        }
+        strong {
+            color: #0078d4;
+            font-weight: 600;
+        }
+        .meta-info {
+            background: linear-gradient(135deg, #e6f2ff 0%, #f0f8ff 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 35px;
+            border-left: 5px solid #4682b4;
+            box-shadow: 0 2px 8px rgba(70, 130, 180, 0.1);
+        }
+        .meta-info p {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        .warning {
+            background: linear-gradient(135deg, #fff3cd 0%, #fff8e1 100%);
+            border-left: 5px solid #ffc107;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(255, 193, 7, 0.15);
+        }
+        .warning p {
+            color: #856404;
+            font-weight: 600;
+        }
+        code, pre {
+            background: #f4f7fa;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9em;
+            color: #d63384;
+            border: 1px solid #e1e8ed;
+        }
+        pre {
+            display: block;
+            padding: 15px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .contact {
+            background: linear-gradient(135deg, #e6f2ff 0%, #f0f8ff 100%);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 35px;
+            border-left: 5px solid #0078d4;
+            box-shadow: 0 2px 8px rgba(0, 120, 212, 0.1);
+        }
+        .contact h2 {
+            margin-top: 0;
+            border-left: none;
+            padding-left: 0;
+        }
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #e1e8ed;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.95em;
+        }
+        a {
+            color: #0078d4;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        a:hover {
+            color: #4682b4;
+            border-bottom: 1px solid #4682b4;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d1e3f0, transparent);
+            margin: 25px 0;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 25px; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.6em; }
+            .lang-selector {
+                position: static;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-selector">
+        <a href="es.html">ES</a> | 
+        <a href="pt.html">PT</a> | 
+        <a href="en.html" class="active">EN</a> | 
+        <a href="../privacy-policy/en.html">Privacy</a>
+    </div>
+    
+    <div class="container">
+        <h1>END USER LICENSE AGREEMENT (EULA)</h1>
+        <h2 style="margin-top: 0;">Ninja Timer Control™</h2>
+        
+        <div class="meta-info">
+            <p><strong>Version:</strong> 1.0</p>
+            <p><strong>Effective Date:</strong> November 20, 2025</p>
+            <p><strong>Last Updated:</strong> November 2025</p>
+        </div>
+        
+        <div class="warning">
+            <p>IMPORTANT - READ CAREFULLY</p>
+            <p style="font-weight: normal; margin-top: 10px;">
+                This End User License Agreement ("EULA") is a legal contract between you (an individual or entity) and Interactive Solutions ("Developer/s", "we", "us", "our") regarding the Ninja Timer Control software ("Software", "Application").
+            </p>
+            <p style="margin-top: 10px;"><strong>BY DOWNLOADING, INSTALLING OR USING THIS SOFTWARE, YOU AGREE TO THE TERMS OF THIS AGREEMENT.</strong></p>
+            <p style="margin-top: 10px;"><strong>If you DO NOT agree, DO NOT download, install or use this Software.</strong></p>
+        </div>
+
+        <h2>1. LICENSE GRANT</h2>
+        <h3>1.1 Limited License</h3>
+        <p>The Developer grants you a <strong>non-exclusive, non-transferable, revocable, limited</strong> license to:</p>
+        <ul>
+            <li>Install and use Ninja Timer Control on devices you own or control</li>
+            <li>Use the Software for personal purposes</li>
+            <li>Create backup copies of configuration files</li>
+        </ul>
+        
+        <h3>1.2 Restrictions</h3>
+        <p>You MAY NOT:</p>
+        <ul>
+            <li>Copy, modify or create derivative works of the Software</li>
+            <li>Reverse engineer, decompile or disassemble the Software</li>
+            <li>Sell, rent, lease, sublicense or commercially distribute the Software</li>
+            <li>Remove or alter copyright, trademark or attribution notices</li>
+            <li>Use the Software for prohibited or unlawful activities</li>
+            <li>Distribute the Software for profit without prior written agreement</li>
+        </ul>
+        
+        <h3>1.3 Subscription Model</h3>
+        <ul>
+            <li>The Software operates under a <strong>monthly subscription</strong> model</li>
+            <li><strong>Trial Period:</strong> 30 days free</li>
+            <li><strong>Subscription Price:</strong> $1.99 USD/month (subject to change)</li>
+            <li>Subscription renews automatically unless you cancel</li>
+            <li>You can cancel at any time from Microsoft Store</li>
+        </ul>
+
+        <h2>2. INTELLECTUAL PROPERTY</h2>
+        <h3>2.1 Copyright</h3>
+        <p>Ninja Timer Control and all its components (source code, design, graphics, icons, documentation) are the exclusive property of Interactive Solutions and protected by applicable intellectual property laws.</p>
+
+        <h3>2.2 Trademarks</h3>
+        <p>"Ninja Timer Control", the logo and other distinctive elements are trademarks of Interactive Solutions.</p>
+        <p>You have NO right to use these marks without express permission.</p>
+
+        <h2>3. PRIVACY AND DATA</h2>
+        <h3>3.1 Data Collection</h3>
+        <p><strong>Ninja Timer Control DOES NOT collect, store or transmit personal data.</strong></p>
+        <p>See our <a href="../privacy-policy/en.html">Privacy Policy</a> for more details.</p>
+
+        <h3>3.2 Local Data</h3>
+        <p>All configuration data is stored <strong>locally on your device</strong> in:</p>
+        <pre><code>%APPDATA%\</code></pre>
+
+        <h3>3.3 User Responsibility</h3>
+        <p>You are responsible for:</p>
+        <ul>
+            <li>Backing up your configurations</li>
+            <li>The security of your device</li>
+            <li>Proper use of automation features</li>
+        </ul>
+
+        <h2>4. DISCLAIMER & WARRANTIES LIMITATION</h2>
+        <h3>4.1 "AS IS" and "AS AVAILABLE"</h3>
+        <p>THE SOFTWARE IS PROVIDED <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong>, WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED.</p>
+
+        <h3>4.2 No Guarantees</h3>
+        <p>THE DEVELOPER <strong>DOES NOT WARRANT</strong> THAT:</p>
+        <ul>
+            <li>The Software will operate error-free or uninterrupted</li>
+            <li>The Software will be compatible with all hardware/software</li>
+            <li>Defects will be corrected</li>
+            <li>The Software will meet all your specific requirements</li>
+            <li>Scheduled tasks will execute exactly as configured</li>
+        </ul>
+
+        <h3>4.3 Exclusion of Implied Warranties</h3>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE DEVELOPER <strong>DISCLAIMS ALL IMPLIED WARRANTIES</strong>, INCLUDING:</p>
+        <ul>
+            <li>Merchantability</li>
+            <li>Fitness for a particular purpose</li>
+            <li>Non-infringement</li>
+            <li>Title</li>
+        </ul>
+
+        <h2>5. LIMITATION OF LIABILITY</h2>
+        <h3>5.1 Exclusion of Damages</h3>
+        <p>IN NO EVENT SHALL THE DEVELOPER BE LIABLE FOR:</p>
+        
+        <p><strong>Direct Damages:</strong></p>
+        <ul>
+            <li>Data or file loss</li>
+            <li>Data corruption</li>
+            <li>Operating system failure</li>
+            <li>Incompatibility with other programs</li>
+        </ul>
+
+        <p><strong>Indirect Damages:</strong></p>
+        <ul>
+            <li>Loss of profits or revenue</li>
+            <li>Business interruption</li>
+            <li>Loss of commercial opportunities</li>
+            <li>Reputational harm</li>
+        </ul>
+
+        <p><strong>Consequential Damages:</strong></p>
+        <ul>
+            <li>Incorrect execution of system commands</li>
+            <li>Unwanted shutdown/restart/logoff</li>
+            <li>Execution of faulty scripts</li>
+            <li>Loss of unsaved work</li>
+        </ul>
+
+        <h3>5.2 Maximum Liability</h3>
+        <p>THE DEVELOPER SHALL HAVE <strong>NO OBLIGATION</strong> TO COMPENSATE OR PAY FOR ANY CLAIM.</p>
+
+        <h3>5.3 User Acknowledgement</h3>
+        <p>YOU ACKNOWLEDGE AND AGREE THAT:</p>
+        <ul>
+            <li>You have read and understood these limitations</li>
+            <li>These limitations reflect a reasonable risk allocation</li>
+            <li>Pricing reflects these limitations</li>
+            <li>Without these limitations, the Software would not be available</li>
+        </ul>
+
+        <h2>6. RESPONSIBLE USE</h2>
+        <h3>6.1 User Obligations</h3>
+        <p>You agree to:</p>
+        <ul>
+            <li><strong>Verify</strong> all tasks before automating them</li>
+            <li><strong>Test</strong> task combinations in a safe environment</li>
+            <li><strong>Backup</strong> critical data before running tasks</li>
+            <li><strong>Monitor</strong> automated tasks regularly</li>
+            <li><strong>Use</strong> the Software ethically and legally</li>
+        </ul>
+
+        <h3>6.2 Prohibited Uses</h3>
+        <p>You MAY NOT use the Software to:</p>
+        <ul>
+            <li>Automate processes that violate laws or regulations</li>
+            <li>Execute malware, viruses or harmful code</li>
+            <li>Damage third-party systems</li>
+            <li>Bypass security measures</li>
+            <li>Engage in fraudulent/deceptive activity</li>
+            <li>Infringe intellectual property rights</li>
+        </ul>
+
+        <h3>6.3 Misuse Consequences</h3>
+        <p>Misuse may result in:</p>
+        <ul>
+            <li>Immediate license termination</li>
+            <li>Legal liability for damages caused</li>
+        </ul>
+
+        <h2>7. UPDATES AND SUPPORT</h2>
+        <h3>7.1 Updates</h3>
+        <ul>
+            <li>Updates may be provided at Developer discretion</li>
+            <li>Updates may modify or remove features</li>
+            <li>Backward compatibility is NOT guaranteed</li>
+            <li>You may refuse updates, but support may be limited</li>
+        </ul>
+
+        <h3>7.2 Technical Support</h3>
+        <ul>
+            <li>Support is provided on an "as available" basis</li>
+            <li>No guaranteed response times</li>
+            <li>Support may be limited or discontinued</li>
+            <li>Support languages: English, Spanish, Portuguese (written only)</li>
+        </ul>
+
+        <h3>7.3 No Obligation to Update</h3>
+        <p>The Developer is <strong>NOT obligated</strong> to:</p>
+        <ul>
+            <li>Provide future updates</li>
+            <li>Fix defects or bugs</li>
+            <li>Add new features</li>
+            <li>Maintain the Software indefinitely</li>
+        </ul>
+
+        <h2>8. TERMINATION</h2>
+        <h3>8.1 By User</h3>
+        <p>You may terminate this Agreement at any time by:</p>
+        <ul>
+            <li>Uninstalling the Software</li>
+            <li>Cancelling your Microsoft Store subscription</li>
+            <li>Deleting all Software files</li>
+        </ul>
+
+        <h3>8.2 By Developer</h3>
+        <p>The Developer may terminate your license if:</p>
+        <ul>
+            <li>You violate any term of this Agreement</li>
+            <li>You misuse the Software</li>
+            <li>Your subscription expires without renewal</li>
+            <li>The Software is discontinued</li>
+        </ul>
+
+        <h3>8.3 Effect of Termination</h3>
+        <p>Upon termination:</p>
+        <ul>
+            <li>Your right to use the Software ceases immediately</li>
+            <li>You must uninstall all copies</li>
+            <li>Liability limitations remain in effect</li>
+            <li>No refunds will be provided (subject to Microsoft Store policy)</li>
+        </ul>
+
+        <h2>9. CHANGES TO AGREEMENT</h2>
+        <h3>9.1 Right to Modify</h3>
+        <p>The Developer reserves the right to modify this EULA at any time.</p>
+
+        <h3>9.2 Change Notification</h3>
+        <p>Changes will be communicated by:</p>
+        <ul>
+            <li>Updating the "Last Updated" date</li>
+            <li>Publishing in Microsoft Store</li>
+        </ul>
+
+        <h3>9.3 Acceptance of Changes</h3>
+        <p>Continued use after changes constitutes acceptance of the new terms.</p>
+        <p>If you DO NOT accept changes, you must stop using the Software.</p>
+
+        <h2>10. GENERAL PROVISIONS</h2>
+        <h3>10.1 Entire Agreement</h3>
+        <p>This EULA constitutes the entire agreement between you and the Developer regarding the Software.</p>
+        <p>It supersedes all prior agreements (written or oral).</p>
+
+        <h3>10.2 Severability</h3>
+        <p>If any provision is held invalid or unenforceable:</p>
+        <ul>
+            <li>Remaining provisions remain in effect</li>
+            <li>The invalid provision will be interpreted to make it valid</li>
+            <li>Invalidity does not affect the rest of the Agreement</li>
+        </ul>
+
+        <h3>10.3 Waiver</h3>
+        <p>Failure to exercise any right does NOT constitute waiver of that right.</p>
+
+        <h3>10.4 Assignment</h3>
+        <p>You may NOT assign your rights under this Agreement.</p>
+        <p>The Developer may assign without your consent.</p>
+
+        <h3>10.5 Language</h3>
+        <p>In case of conflict among translations, the Spanish version prevails.</p>
+
+        <h2>11. GOVERNING LAW & JURISDICTION</h2>
+        <h3>11.1 Governing Law</h3>
+        <p>This Agreement is governed by the laws of <strong>Mexico</strong>, without regard to conflict of law principles.</p>
+
+        <h3>11.2 Dispute Resolution</h3>
+        <p>Parties agree to attempt resolution through:</p>
+        <ol>
+            <li>Direct negotiation</li>
+            <li>Mediation (if necessary)</li>
+        </ol>
+
+        <h2>12. MICROSOFT STORE COMPLIANCE</h2>
+        <h3>12.1 Microsoft Policies</h3>
+        <p>In addition to this EULA, you agree to comply with:</p>
+        <ul>
+            <li><a href="https://www.microsoft.com/en-us/servicesagreement" target="_blank">Microsoft Store Terms of Use</a></li>
+            <li>Microsoft application policies</li>
+            <li>Microsoft community standards</li>
+        </ul>
+
+        <h3>12.2 Conflicts</h3>
+        <p>If conflict exists:</p>
+        <ul>
+            <li>Microsoft Store terms prevail for payment/subscription matters</li>
+            <li>This EULA prevails for Software usage terms</li>
+        </ul>
+
+        <h2>13. INDEMNIFICATION</h2>
+        <p>You agree to indemnify, defend and hold harmless the Developer from:</p>
+        <ul>
+            <li>Any claim arising from your use of the Software</li>
+            <li>Your violation of this Agreement</li>
+            <li>Third-party rights violations</li>
+            <li>Misuse or negligent use of the Software</li>
+        </ul>
+        <p>Includes reasonable legal defense costs.</p>
+
+        <h2>14. EXPORT</h2>
+        <p>You agree to comply with all applicable export/import laws.</p>
+        <p>Do not export the Software to embargoed countries or prohibited persons.</p>
+
+        <h2>15. MINORS</h2>
+        <p>If you are under 18 (or legal age in your jurisdiction):</p>
+        <ul>
+            <li>You must have parent/guardian permission</li>
+            <li>The parent/guardian accepts this Agreement on your behalf</li>
+            <li>Parent/guardian is responsible for your use</li>
+        </ul>
+
+        <div class="contact">
+            <h2 style="margin-top: 0;">16. CONTACT</h2>
+            <p>Questions about this EULA:</p>
+            <p><strong>Email:</strong> interactive.sup.solutions@outlook.com</p>
+            <p><strong>Address:</strong></p>
+            <p><strong>Website:</strong></p>
+        </div>
+
+        <h2>17. ACKNOWLEDGEMENT</h2>
+        <p>BY CLICKING "ACCEPT", DOWNLOADING, INSTALLING OR USING THIS SOFTWARE, YOU ACKNOWLEDGE THAT:</p>
+        <ul>
+            <li>You have read this Agreement fully</li>
+            <li>You understand its terms and conditions</li>
+            <li>You agree to be legally bound</li>
+            <li>You have legal capacity to enter this Agreement</li>
+            <li>You accept warranty and liability limitations</li>
+        </ul>
+
+        <h2>ACCEPTANCE</h2>
+        <p><strong>I HAVE READ AND ACCEPT THE TERMS OF THIS END USER LICENSE AGREEMENT</strong></p>
+
+        <hr style="margin: 40px 0;">
+
+        <p><strong>2025 Interactive Solutions. All rights reserved.</strong></p>
+        <p><strong>Ninja Timer Control™ is a trademark of Interactive Solutions.</strong></p>
+
+        <hr style="margin: 20px 0;">
+
+        <p><em>This document is a legally binding agreement. If you do not understand any part, consult legal counsel before accepting.</em></p>
+
+        <div class="footer">
+            <p><strong>Version 1.0</strong> - Effective since November 20, 2025</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+

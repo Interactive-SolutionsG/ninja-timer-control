@@ -1,0 +1,528 @@
+﻿<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politica de Privacidade - Ninja Timer Control</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #2c5f8d 0%, #3a7ca5 50%, #5b9bd5 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 1px rgba(70, 130, 180, 0.3);
+        }
+        .lang-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+            z-index: 1000;
+            border: 1px solid rgba(70, 130, 180, 0.2);
+        }
+        .lang-selector a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #4682b4;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .lang-selector a:hover {
+            background: #e6f2ff;
+            color: #0078d4;
+        }
+        .lang-selector a.active {
+            background: #4682b4;
+            color: white;
+        }
+        h1 {
+            color: #4682b4;
+            font-size: 2.6em;
+            margin-bottom: 10px;
+            border-bottom: 4px solid #4682b4;
+            padding-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        h2 {
+            color: #5b9bd5;
+            font-size: 1.9em;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            border-left: 5px solid #5b9bd5;
+            padding-left: 15px;
+        }
+        h3 {
+            color: #0078d4;
+            font-size: 1.35em;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        p, li {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #2c3e50;
+            line-height: 1.8;
+        }
+        ul, ol {
+            margin-left: 35px;
+            margin-bottom: 20px;
+        }
+        strong {
+            color: #0078d4;
+            font-weight: 600;
+        }
+        .meta-info {
+            background: linear-gradient(135deg, #e6f2ff 0%, #f0f8ff 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 35px;
+            border-left: 5px solid #4682b4;
+            box-shadow: 0 2px 8px rgba(70, 130, 180, 0.1);
+        }
+        .meta-info p {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        .highlight {
+            background: #e6fffa;
+            border-left: 4px solid #38b2ac;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        .highlight p {
+            color: #234e52;
+            font-weight: 600;
+        }
+        code, pre {
+            background: #f4f7fa;
+            padding: 4px 10px;
+            border-radius: 5px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 0.9em;
+            color: #d63384;
+            border: 1px solid #e1e8ed;
+        }
+        pre {
+            display: block;
+            padding: 15px;
+            margin: 15px 0;
+            overflow-x: auto;
+        }
+        .contact {
+            background: linear-gradient(135deg, #e6f2ff 0%, #f0f8ff 100%);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 35px;
+            border-left: 5px solid #0078d4;
+            box-shadow: 0 2px 8px rgba(0, 120, 212, 0.1);
+        }
+        .contact h2 {
+            margin-top: 0;
+            border-left: none;
+            padding-left: 0;
+        }
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #e1e8ed;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.95em;
+        }
+        a {
+            color: #0078d4;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+        a:hover {
+            color: #4682b4;
+            border-bottom: 1px solid #4682b4;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #d1e3f0, transparent);
+            margin: 25px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #e2e8f0;
+        }
+        th {
+            background: #f7fafc;
+        }
+        @media (max-width: 768px) {
+            .container { padding: 25px; }
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.6em; }
+            .lang-selector {
+                position: static;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lang-selector">
+        <a href="es.html">ES</a> | 
+        <a href="pt.html" class="active">PT</a> | 
+        <a href="en.html">EN</a> | 
+        <a href="../terms-of-use/pt.html">EULA</a>
+    </div>
+    
+    <div class="container">
+        <h1>POLITICA DE PRIVACIDADE</h1>
+        <h2 style="margin-top: 0;">Ninja Timer Control™</h2>
+        
+        <div class="meta-info">
+            <p><strong>Ultima atualizacao:</strong> Novembro 2025</p>
+            <p><strong>Versao:</strong> 1.0</p>
+        </div>
+
+        <h2>1. Informacoes Gerais</h2>
+        <p><strong>Ninja Timer Control</strong> e um aplicativo de agendamento e gerenciamento de tarefas desenvolvido com maximo respeito a sua privacidade. Esta politica explica quais informacoes coletamos (ou melhor, o que <strong>NAO</strong> coletamos) e como protegemos sua privacidade.</p>
+        <p><strong>Desenvolvedor:</strong> Interactive Solutions</p>
+        <p><strong>Contato:</strong> interactive.sup.solutions@outlook.com</p>
+        <p><strong>Site:</strong></p>
+
+        <h2>2. Compromisso com a Privacidade</h2>
+        <h3>Principio Fundamental:</h3>
+        <p><strong>Ninja Timer Control NAO coleta, NAO armazena, NAO transmite e NAO compartilha quaisquer dados pessoais.</strong></p>
+
+        <h2>3. Dados que NAO Coletamos</h2>
+        <p>Este aplicativo <strong>NAO coleta</strong> os seguintes tipos de dados:</p>
+        
+        <h3>Dados Pessoais:</h3>
+        <ul>
+            <li>Nome, sobrenome, endereco</li>
+            <li>E-mail</li>
+            <li>Telefone</li>
+            <li>Data de nascimento</li>
+            <li>Localizacao geografica</li>
+            <li>Endereco IP</li>
+        </ul>
+        
+        <h3>Dados de Uso:</h3>
+        <ul>
+            <li>Estatisticas de uso do aplicativo</li>
+            <li>Telemetria ou analise comportamental</li>
+            <li>Horarios de uso</li>
+            <li>Frequencia de utilizacao</li>
+        </ul>
+        
+        <h3>Dados Tecnicos:</h3>
+        <ul>
+            <li>Informacoes do dispositivo</li>
+            <li>Detalhes do sistema operacional</li>
+            <li>Especificacoes de hardware</li>
+            <li>Identificadores unicos de dispositivo</li>
+            <li>Logs de erro ou diagnostico</li>
+        </ul>
+
+        <p><strong>Nota sobre identificadores de dispositivo:</strong><br>
+        A Microsoft Store utiliza identificadores para gerenciar licencas e sincronizar assinaturas entre dispositivos. Entretanto, <strong>nos como desenvolvedores NAO temos acesso a esses identificadores</strong>. Recebemos apenas a resposta "licenca valida" ou "licenca invalida".</p>
+        
+        <h3>Dados de Tarefas:</h3>
+        <ul>
+            <li>Suas tarefas agendadas</li>
+            <li>Horarios de execucao</li>
+            <li>Nomes de tarefas</li>
+        </ul>
+        
+        <p><strong>Tudo permanece na sua maquina local.</strong></p>
+
+        <h2>4. Armazenamento de Dados</h2>
+        <h3>Dados Somente Locais</h3>
+        <p>Todas as informacoes configuradas no Ninja Timer Control sao armazenadas <strong>exclusivamente no seu dispositivo</strong> em: <code>%APPDATA%\</code></p>
+        
+        <p><strong>Arquivos criados localmente incluem:</strong></p>
+        <ul>
+            <li>Configuracoes de tarefas</li>
+            <li>Preferencias do usuario</li>
+            <li>Idioma selecionado</li>
+            <li>Tarefas agendadas</li>
+        </ul>
+        
+        <p><strong>Esses arquivos:</strong></p>
+        <ul>
+            <li>Existem apenas no seu computador</li>
+            <li>NAO sao sincronizados com nenhum servidor</li>
+            <li>NAO sao acessiveis ao desenvolvedor</li>
+            <li>Podem ser excluidos a qualquer momento</li>
+        </ul>
+
+        <h2>5. Comunicacao com Servidores Externos</h2>
+        <h3>Sem Conexao Obrigatoria a Internet</h3>
+        <p><strong>Ninja Timer Control NAO requer conexao com a internet</strong> para funcionar e <strong>NAO se comunica</strong> com servidores externos.</p>
+        
+        <p><strong>Excecoes:</strong></p>
+        
+        <p>1. <strong>Microsoft Store:</strong></p>
+        <ul>
+            <li>Ao baixar ou atualizar pela Microsoft Store</li>
+            <li>Para validar sua assinatura ou periodo de teste</li>
+            <li><strong>Gerenciado pela Microsoft</strong></li>
+        </ul>
+        
+        <p>2. <strong>Atualizacoes (Opcional):</strong></p>
+        <ul>
+            <li>Somente se voce verificar atualizacoes manualmente</li>
+            <li>NAO sao enviados dados pessoais, apenas a versao do aplicativo</li>
+        </ul>
+        
+        <p><strong>NAO ha:</strong></p>
+        <ul>
+            <li>Servicos de analise de terceiros</li>
+            <li>Redes de publicidade</li>
+            <li>Servicos de rastreamento</li>
+            <li>Cookies</li>
+        </ul>
+
+        <h2>6. Assinatura e Pagamentos</h2>
+        <p>Se voce assinar o Ninja Timer Control:</p>
+        <ul>
+            <li>A <strong>Microsoft Store</strong> processa todos os pagamentos</li>
+            <li>A Microsoft armazena informacoes de pagamento</li>
+            <li>A Microsoft identifica seu dispositivo e conta Microsoft</li>
+            <li><strong>NAO temos acesso</strong> a:
+                <ul>
+                    <li>Informacoes de pagamento</li>
+                    <li>Metodos de pagamento</li>
+                    <li>Dados bancarios ou de cartao</li>
+                    <li>Historico de compras (apenas estado ativo/inativo)</li>
+                    <li>IDs unicos de dispositivo</li>
+                    <li>Detalhes da sua conta Microsoft</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p><strong>Sabemos apenas:</strong></p>
+        <ul>
+            <li>Se sua licenca/assinatura esta ativa ou expirada</li>
+            <li>Data de inicio do teste</li>
+        </ul>
+        
+        <p><strong>Para mais detalhes:</strong><br>
+        Consulte a <a href="https://privacy.microsoft.com/es-es/privacystatement" target="_blank">Politica de Privacidade da Microsoft</a>.</p>
+
+        <h2>7. Permissoes do Aplicativo</h2>
+        <h3>Permissoes Minimas</h3>
+        <p>Ninja Timer Control solicita apenas o necessario para operar:</p>
+        
+        <table>
+            <tr>
+                <th>Permissao</th>
+                <th>Finalidade</th>
+                <th>Obrigatoria</th>
+            </tr>
+            <tr>
+                <td><strong>Acesso ao sistema de arquivos local</strong></td>
+                <td>Salvar configuracoes e tarefas</td>
+                <td>Sim</td>
+            </tr>
+            <tr>
+                <td><strong>Execucao de comandos do sistema</strong></td>
+                <td>Agendar e executar tarefas</td>
+                <td>Sim</td>
+            </tr>
+            <tr>
+                <td><strong>Notificacoes</strong></td>
+                <td>Mostrar lembretes</td>
+                <td>Parcial</td>
+            </tr>
+            <tr>
+                <td><strong>Iniciar com o Windows</strong></td>
+                <td>Disponibilidade em segundo plano</td>
+                <td>Nao</td>
+            </tr>
+        </table>
+        
+        <p><strong>NAO solicitamos:</strong></p>
+        <ul>
+            <li>Acesso a camera ou microfone</li>
+            <li>Acesso a contatos</li>
+            <li>Acesso a localizacao</li>
+            <li>Acesso a biblioteca de midia</li>
+            <li>Acesso continuo a internet (exceto licenciamento)</li>
+        </ul>
+
+        <h2>8. Uso das Informacoes</h2>
+        <p>Como <strong>NAO coletamos dados pessoais</strong>, nenhuma informacao pessoal e usada.</p>
+        <p>Os unicos dados existentes sao:</p>
+        <ul>
+            <li><strong>Configuracoes locais</strong> no dispositivo</li>
+            <li><strong>Estado da licenca</strong></li>
+        </ul>
+
+        <h2>9. Compartilhamento com Terceiros</h2>
+        <h3>SEM Compartilhamento de Dados</h3>
+        <p>Nao ha coleta de dados.</p>
+        <p>NAO vendemos, alugamos ou compartilhamos:</p>
+        <ul>
+            <li>Dados pessoais</li>
+            <li>Dados de uso</li>
+            <li>Informacoes de tarefas</li>
+            <li>Quaisquer informacoes</li>
+        </ul>
+
+        <h2>10. Seguranca dos Dados</h2>
+        <h3>Protecao Local</h3>
+        <p>Como os dados estao somente localmente:</p>
+        <ul>
+            <li><strong>Voce e responsavel</strong> pela seguranca fisica do dispositivo</li>
+            <li><strong>O Windows gerencia</strong> permissoes de acesso</li>
+            <li><strong>Recomendamos:</strong>
+                <ul>
+                    <li>Usar senha na conta Windows</li>
+                    <li>Manter o Windows atualizado</li>
+                    <li>Utilizar antivirus confiavel</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <p><strong>Nos:</strong></p>
+        <ul>
+            <li>NAO armazenamos dados em servidores</li>
+            <li>NAO temos risco de vazamento server-side</li>
+            <li>NAO coletamos nada remotamente</li>
+        </ul>
+
+        <h2>11. Direitos do Usuario</h2>
+        <h3>Seus Direitos</h3>
+        <p>Como nao tratamos dados pessoais, muitas regulacoes (GDPR, CCPA) nao se aplicam. Ainda assim, respeitamos:</p>
+        
+        <table>
+            <tr>
+                <th>Direito</th>
+                <th>Como Exercer</th>
+            </tr>
+            <tr>
+                <td><strong>Acesso</strong></td>
+                <td>Dados em <code>%APPDATA%\</code></td>
+            </tr>
+            <tr>
+                <td><strong>Exclusao</strong></td>
+                <td>Desinstale ou apague os arquivos</td>
+            </tr>
+            <tr>
+                <td><strong>Portabilidade</strong></td>
+                <td>Copie arquivos de configuracao para outro dispositivo</td>
+            </tr>
+            <tr>
+                <td><strong>Oposicao</strong></td>
+                <td>Nao aplicavel</td>
+            </tr>
+            <tr>
+                <td><strong>Retificacao</strong></td>
+                <td>Edite arquivos de configuracao (sem engenharia reversa)</td>
+            </tr>
+        </table>
+
+        <h2>12. Privacidade de Menores</h2>
+        <p>Ninja Timer Control e seguro para todas as idades:</p>
+        <ul>
+            <li>Sem coleta de dados pessoais</li>
+            <li>Sem anuncios</li>
+            <li>Sem conteudo impropio</li>
+            <li>Sem criacao de contas</li>
+        </ul>
+        <p><strong>Classificacao:</strong> Apto para 3+ anos</p>
+
+        <h2>13. Cookies e Tecnologias de Rastreamento</h2>
+        <h3>Sem Cookies</h3>
+        <p>Ninja Timer Control nao usa:</p>
+        <ul>
+            <li>Cookies</li>
+            <li>LocalStorage / SessionStorage</li>
+            <li>Pixels de rastreamento</li>
+        </ul>
+
+        <h2>14. Alteracoes nesta Politica</h2>
+        <p>Se alterarmos esta Politica:</p>
+        <ol>
+            <li>Atualizaremos a data "Ultima atualizacao"</li>
+            <li>Aumentaremos o numero de versao</li>
+            <li>Notas de versao mencionarao mudancas</li>
+            <li>Entram em vigor imediatamente</li>
+        </ol>
+        <p><strong>Recomendamos</strong> revisar periodicamente.</p>
+
+        <h2>15. Conformidade Legal</h2>
+        <h3>Regulamentos Aplicaveis</h3>
+        <p><strong>Ninja Timer Control esta em conformidade com:</strong></p>
+        <ul>
+            <li><strong>GDPR</strong> (Regulamento Geral de Protecao de Dados - UE)</li>
+            <li><strong>CCPA</strong> (California Consumer Privacy Act)</li>
+            <li><strong>LGPD</strong> (Lei Geral de Protecao de Dados - Brasil)</li>
+            <li><strong>Politicas da Microsoft Store</strong></li>
+        </ul>
+        <p><strong>Conformidade automatica</strong> pois NAO ha coleta de dados pessoais.</p>
+
+        <div class="contact">
+            <h2 style="margin-top: 0;">16. CONTATO</h2>
+            <p>Duvidas sobre esta Politica:</p>
+            <p><strong>Email:</strong> interactive.sup.solutions@outlook.com</p>
+            <p><strong>Site:</strong></p>
+            <p><strong>Microsoft Store:</strong></p>
+            <p><strong>Tempo de resposta:</strong> Responderemos conforme disponibilidade.</p>
+        </div>
+
+        <h2>17. Jurisdicao</h2>
+        <p>Esta Politica e regida pelas leis do <strong>Mexico</strong>.</p>
+        <p>Inclui conformidade com:</p>
+        <ul>
+            <li><strong>Lei Federal de Protecao de Dados Pessoais</strong> (LFPDPPP)</li>
+            <li>Regulamentos complementares</li>
+            <li>Diretrizes oficiais mexicanas</li>
+        </ul>
+
+        <h2>18. Declaracao Final</h2>
+        <p><strong>Ninja Timer Control</strong> foi criado com um principio essencial:</p>
+        <p style="font-style: italic; font-size: 1.2em; margin: 20px 0;">"Sua privacidade e sua. Tudo permanece no seu dispositivo."</p>
+        <p>Nao precisamos dos seus dados para oferecer produtividade.</p>
+        <p><strong>Obrigado por confiar no Ninja Timer Control.</strong></p>
+
+        <div class="footer">
+            <p><em>Vigente desde <strong>20 de novembro de 2025</strong> e aplicavel a versao 1.0 e posteriores.</em></p>
+            <hr style="margin: 20px 0;">
+            <h3>Licenca deste Documento</h3>
+            <p>Este documento pode ser compartilhado e modificado por nos segundo os termos da licenca do software Ninja Timer Control.</p>
+            <p><strong>Ninja Timer Control™</strong> e marca registrada de Interactive Solutions.</p>
+            <p><strong>2025 Interactive Solutions.</strong> Todos os direitos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
